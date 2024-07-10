@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Here</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .index-page {
+            background-image: url("{{ url_for('static', filename='images/frontpage2.png') }}");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            font-weight: 600;
+            font-size: 3em; /* Larger font size */
+            margin-bottom: 20px;
+            color: #f0e68c; /* Cream text color */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 20px; /* Adjust top position */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%);
+        }
+
+        .btn-primary {
+            padding: 30px; /* Larger padding */
+            background-color: #f0e68c; /* Cream background */
+            border: 2px solid #483d8b; /* Dark purple border */
+            color: #483d8b; /* Dark purple text color */
+            font-size: 1.5em; /* Larger font size */
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s, color 0.3s;
+            font-weight: 600;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 50%; /* Make it round */
+            width: 200px; /* Fixed width for round shape */
+            height: 200px; /* Fixed height for round shape */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn-primary:hover {
+            background-color: #483d8b; /* Dark purple background on hover */
+            color: #f0e68c; /* Cream text color on hover */
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="index-page">
+    <h1>Welcome Here</h1>
+    <button id="viewAnalysis" class="btn-primary">View Analysis</button>
+
+    <script>
+        document.getElementById('viewAnalysis').addEventListener('click', function() {
+            window.location.href = '/view';
+        });
+    </script>
+</body>
+</html>

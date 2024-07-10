@@ -1,0 +1,30 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.index-page {
+    background-image: url("{{ url_for('static', filename='images/frontpage.png') }}");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+
+
+
+.btn-round {
+    border-radius: 100px; /* Make it round */
+}
+
+
+
+
